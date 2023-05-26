@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>java基础 | HZH-Blogs</title><meta name="author" content="HZH"><meta name="copyright" content="HZH"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="面向过程和面向对象的区别 面向过程：是分析解决问题的步骤，然后用函数把这些步骤一步一步地实现，然后在使用时调用即可。性能较高，单片机、嵌入式开发一般采用面向过程开发。 面向对象：就是把构成问题的事物分解成各个对象，不关心其具体实现过程，只关心完成功能。面向对象有封装、继承、多态的特性，所以易维护、易复用、易扩展。可以设计出低耦合的系统，但是从性能上来说，要比面向过程要低。  八种基本数据类型的大小">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础">
+<meta property="og:url" content="http://example.com/post/b8b0eacd.html">
+<meta property="og:site_name" content="HZH-Blogs">
+<meta property="og:description" content="面向过程和面向对象的区别 面向过程：是分析解决问题的步骤，然后用函数把这些步骤一步一步地实现，然后在使用时调用即可。性能较高，单片机、嵌入式开发一般采用面向过程开发。 面向对象：就是把构成问题的事物分解成各个对象，不关心其具体实现过程，只关心完成功能。面向对象有封装、继承、多态的特性，所以易维护、易复用、易扩展。可以设计出低耦合的系统，但是从性能上来说，要比面向过程要低。  八种基本数据类型的大小">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://tupian.qqw21.com/article/UploadPic/2022-5/202251313202922535.jpg">
+<meta property="article:published_time" content="2023-05-26T10:35:33.000Z">
+<meta property="article:modified_time" content="2023-05-26T10:47:56.571Z">
+<meta property="article:author" content="HZH">
+<meta property="article:tag" content="java基础">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tupian.qqw21.com/article/UploadPic/2022-5/202251313202922535.jpg"><link rel="shortcut icon" href="/img/favicon.jpg"><link rel="canonical" href="http://example.com/post/b8b0eacd.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: 'days',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: HZH","link":"Link: ","source":"Source: HZH-Blogs","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'java基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-05-26 18:47:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = 'hidden';
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+
+preloader.initLoading()
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (false) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://tupian.qqw21.com/article/UploadPic/2022-5/202251313202922535.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="HZH-Blogs"><span class="site-name">HZH-Blogs</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">java基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-05-26T10:35:33.000Z" title="Created 2023-05-26 18:35:33">2023-05-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-05-26T10:47:56.571Z" title="Updated 2023-05-26 18:47:56">2023-05-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/java/">java</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="java基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h1 id="面向过程和面向对象的区别"><a href="#面向过程和面向对象的区别" class="headerlink" title="面向过程和面向对象的区别"></a>面向过程和面向对象的区别</h1><ul>
+<li><code>面向过程</code>：是分析解决问题的步骤，然后用函数把这些步骤一步一步地实现，然后在使用时调用即可。性能较高，单片机、嵌入式开发一般采用面向过程开发。</li>
+<li><code>面向对象</code>：就是把构成问题的事物分解成各个对象，不关心其具体实现过程，只关心完成功能。面向对象有<code>封装</code>、<code>继承</code>、<code>多态</code>的特性，所以<code>易维护</code>、<code>易复用</code>、<code>易扩展</code>。可以设计出低耦合的系统，但是从性能上来说，要比面向过程要低。</li>
+</ul>
+<h1 id="八种基本数据类型的大小，以及他们的封装类"><a href="#八种基本数据类型的大小，以及他们的封装类" class="headerlink" title="八种基本数据类型的大小，以及他们的封装类"></a>八种基本数据类型的大小，以及他们的封装类</h1><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>大小（字节）</th>
+<th>封装类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>1</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>float</td>
+<td>4</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>char</td>
+<td>2</td>
+<td>Character</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>1</td>
+<td>Boolean</td>
+</tr>
+</tbody></table>
+<ul>
+<li>6 种数字类型：<ul>
+<li>4 种整数型：<code>byte</code>、<code>short</code>、<code>int</code>、<code>long</code></li>
+<li>2 种浮点型：<code>float</code>、<code>double</code></li>
+</ul>
+</li>
+<li>1 种字符类型：<code>char</code></li>
+<li>1 种布尔型：<code>boolean</code>。</li>
+</ul>
+<h1 id="基本类型和包装类型的区别"><a href="#基本类型和包装类型的区别" class="headerlink" title="基本类型和包装类型的区别"></a>基本类型和包装类型的区别</h1><p><strong>用途</strong>：我们在方法参数、对象属性中很少会使用基本类型来定义变量，都是使用包装类型。并且，包装类型可用于泛型，而基本类型不可以。</p>
+<p><strong>默认值</strong>：成员变量包装类型不赋值就是 <code>null</code> ，而基本类型有默认值且不是 <code>null</code>。比如int默认值是0，而Integer默认值是null，所以Integer能区分出0和null的情况。</p>
+<p><strong>比较方式</strong>：对于基本数据类型来说，<code>==</code> 比较的是值。对于包装数据类型来说，<code>==</code> 比较的是对象的内存地址。所有整型包装类对象之间值的比较，全部使用 <code>equals()</code> 方法。</p>
+<p><strong>缓存机制</strong>：包装类型大部分都用到了缓存机制来提升性能。</p>
+<p>4种整型包装类默认创建了数值 <strong>[-128，127]</strong> 的相应类型的缓存数据，范围内的数据就会从缓存中读取，范围外就会创建一个新的对象。虽然integer对象在[-128，127] 范围内会复用对象使用&#x3D;&#x3D;判断也是正确的，但是这个区间之外，都会在堆上产生新的对象。因此<strong>所有整型包装类对象之间值的比较，全部使用 equals 方法比较</strong>。</p>
+<h1 id="equals和-x3D-x3D-的区别"><a href="#equals和-x3D-x3D-的区别" class="headerlink" title="equals和&#x3D;&#x3D;的区别"></a>equals和&#x3D;&#x3D;的区别</h1><p>基本数据类型，&#x3D;&#x3D;比较内容</p>
+<p>引用数据类型，&#x3D;&#x3D;比较对象的引用，也就是内存地址</p>
+<p>对于equals方法，类没有重写equals，就和&#x3D;&#x3D;作用一样，用的是object类的equals方法，object类equals()方法默认实现是使用&#x3D;&#x3D;来比较的，所以都是比较内存地址。</p>
+<p>但是类可以重写equals方法以实现比较对象内容的功能。比如String类就默认重写了object类的equals方法。</p>
+<h2 id="String类的equals方法"><a href="#String类的equals方法" class="headerlink" title="String类的equals方法"></a>String类的equals方法</h2><p>先比较地址，地址相同直接返回true，再遍历比较字符串内容，内容相同就返回true</p>
+<h1 id="为什么重写equals必须重写hashcode"><a href="#为什么重写equals必须重写hashcode" class="headerlink" title="为什么重写equals必须重写hashcode"></a>为什么重写equals必须重写hashcode</h1><h2 id="hashcode的作用："><a href="#hashcode的作用：" class="headerlink" title="hashcode的作用："></a>hashcode的作用：</h2><p>就是<strong>根据对象的内存地址</strong>换算出一个<strong>散列值</strong>，这个值可以确定该对象在哈希表中的索引位置。</p>
+<p>在一些容器（比如 <code>HashMap</code>、<code>HashSet</code>）中，有了 <code>hashCode()</code> 之后，判断元素是否在对应容器中的<strong>效率会更高</strong>。先调用这个元素的<code>hashCode</code>方法，如果同样的 <code>hashCode</code> 有多个对象，它会继续使用 <code>equals()</code> 来判断是否真的相同。</p>
+<h2 id="为什么要一起重写"><a href="#为什么要一起重写" class="headerlink" title="为什么要一起重写"></a>为什么要一起重写</h2><p>因为两个相等的对象的 <code>hashCode</code> 值必须是相等。也就是说如果 <code>equals</code> 方法判断两个对象是相等的，那这两个对象的 <code>hashCode</code> 值也要相等。</p>
+<p><strong>如果重写 <code>equals()</code> 时没有重写 <code>hashCode()</code> 方法的话就可能会导致 <code>equals</code> 方法重写后通过内容比较判断是相等的两个对象，<code>hashCode</code> 值却不相等。</strong> 因为不重写就会调用object类的hashcode方法，不是一个内存地址计算出来的hashcode值就不同。</p>
+<p>比如HashSet集合中类如果重写equals方法没有重写hashcode方法，当添加两个等值的对象，集合先根据hashcode方法判断两个相等值对象的哈希值不同，最终导致HashSet集合根据哈希值认为他们不同，添加了两个等值的对象，集合中比较是先根据hashcode，hashcode值一样再根据equals判断，所以要一起重写。</p>
+<p>另外，在Java中，String、Long、Integer等常见的数据类型已经实现了hashCode()和equals()方法，因此可以直接作为HashMap的key或者HashSet元素存储。</p>
+<h1 id="接口和抽象类共同点和区别"><a href="#接口和抽象类共同点和区别" class="headerlink" title="接口和抽象类共同点和区别"></a>接口和抽象类共同点和区别</h1><p><strong>共同点</strong>：<br>都不能被实例化，都可以有抽象方法<br>java8之后都可以有默认方法<br><strong>区别</strong>：<br>一个类只能继承一个抽象类，却可以实现多个接口<br>抽象类中成员变量可以是各种类型，但接口中成员变量只能是public static final<br>jdk1.8以前：抽象类中方法可以有方法体，而接口中方法不行。<br>1.8以后：接口里也可以有包含方法体的默认方法<br>抽象方法就是为了被重写，所以肯定不能用private修饰符。1.9以后，允许将接口方法定义为private</p>
+<h1 id="深拷贝和浅拷贝的区别是什么"><a href="#深拷贝和浅拷贝的区别是什么" class="headerlink" title="深拷贝和浅拷贝的区别是什么"></a>深拷贝和浅拷贝的区别是什么</h1><ul>
+<li><code>深拷贝：</code>是指将一个对象复制到另一个对象，新对象与原对象<code>不共享</code>引用类型属性（如数组、集合、对象等），也就是说，新对象和原对象的引用类型属性指向的是不同的地址，修改其中一个对象中的引用类型属性，不会影响另一个对象中的属性值。</li>
+<li><code>浅拷贝：</code>是指将一个对象复制到另一个对象，新对象与原对象<code>共享</code>引用类型属性，也就是说，新对象与原对象中的引用类型属性指向的是同一个地址，修改器中一个对象的引用类型属性，会影响到另一个对象的属性值，Java中的Object类提供了clone方法来实现浅拷贝</li>
+</ul>
+<h1 id="String、StringBuffer、StringBuilder"><a href="#String、StringBuffer、StringBuilder" class="headerlink" title="String、StringBuffer、StringBuilder"></a>String、StringBuffer、StringBuilder</h1><p><strong>可变性</strong><br>String不可变，StringBuffer和StringBuilder可变<br>例如给string类型s赋值“abcd”，第二次给s赋值为“abcdef”，不是在原内存地址上修改，而是重新生成一个新对象，新地址。指针指向新的string对象</p>
+<p>每次<code>+</code>操作：隐式在堆上<code>new</code>了一个跟原字符串相同的<code>StringBuilder</code>对象，再调用append方法，拼接<code>+</code>后面的字符</p>
+<p>String直接创建的字符串会将字符串对象的引用存储在常量池中，如果一个string对象已经创建过了，那么第二次就直接返回string对象在字符串常量池中的引用<br><strong>线程安全</strong><br>string不可变常量，所以线程是安全的。<br>StringBuffer是线程安全的，内部使用synchronized同步。<br>StringBuilder线程不安全。<br><strong>性能</strong><br>StringBuilder因为没加锁比StringBuffer性能更快，不要求线程安全的情况下，多数选StringBuilder</p>
+<h1 id="反射的理解"><a href="#反射的理解" class="headerlink" title="反射的理解"></a>反射的理解</h1><p>反射机制是指在运行时，对于任意一个类，<strong>通过反射都能够知道这个类的所有属性和方法</strong>，在java中，反射可以通过Class类的一些方法来获取<code>Constructor</code>、<code>Method</code>、<code>Filed</code>等类的信息，通过这些信息可以实现对类的<code>实例化</code>、<code>调用方法</code>、<code>获取字段值</code>等操作，这种<strong>动态获取信息的功能称为反射机制。</strong></p>
+<p><strong>class类对象的获取方式</strong><br>主要三种<br>根据类名：类名.class<br>根据对象：对象名.getClass（）<br>根据全限定类名：Class.forName（全限定类名）<br>还有通过类加载器获取ClassLoader.loadClass()方法</p>
+<h1 id="Object类中的常用方法"><a href="#Object类中的常用方法" class="headerlink" title="Object类中的常用方法"></a>Object类中的常用方法</h1><ul>
+<li>Object类是Java中所有类的基类，她定义了一些常用的方法，包括<ol>
+<li><code>equals(Object obj)：</code>判断当前对象是否与另一个对象相等，通常需要重写该方法</li>
+<li><code>hashCode()：</code>返回当前对象的哈希码，用于哈希表等数据结构</li>
+<li><code>toString()：</code>返回当前对象的字符串表示，通常需要重写该方法</li>
+<li><code>getClass()：</code>返回当前对象的类类型</li>
+<li><code>wait()：</code>使当前线程等待，直到其他线程调用该对象的notify()或notifyAll()方法</li>
+<li><code>notify()：</code>唤醒一个等待中的线程</li>
+<li><code>notifyAll()：</code>唤醒所有等待中的线程</li>
+<li><code>finalize()：</code>在垃圾回收器回收对象之前调用，用于释放资源等清理工作</li>
+</ol>
+</li>
+</ul>
+<h1 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h1><h2 id="分为哪几种"><a href="#分为哪几种" class="headerlink" title="分为哪几种"></a>分为哪几种</h2><p>inputstream&#x2F;Reader 字节输入流和字符输入流，是所有输入流的基类<br>Outputstream&#x2F;Writer 字节输出流和字符输出流，是所有输出流的基类</p>
+<h2 id="字节-x2F-字符缓冲流的作用"><a href="#字节-x2F-字符缓冲流的作用" class="headerlink" title="字节&#x2F;字符缓冲流的作用"></a>字节&#x2F;字符缓冲流的作用</h2><p>缓冲流先将数据加载至缓冲区，再从缓冲区一次性读取或写入多个字节，从而避免频繁的IO操作，提高流的传输效率。</p>
+<h1 id="ArrayList和LinkedList区别"><a href="#ArrayList和LinkedList区别" class="headerlink" title="ArrayList和LinkedList区别"></a>ArrayList和LinkedList区别</h1><h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><p><strong>底层数据结构：</strong> 基于动态数组实现，连续内存存储。</p>
+<p><strong>查找：</strong> 所以适合下标查询（因为数组是连续的内存空间）时间复杂度为O(1)</p>
+<p><strong>插入删除</strong>：除了尾部都不适合，性能消耗很大。比如：执行<code>add(E e)</code>方法的时候， <code>ArrayList</code> 会默认在将指定的元素追加到此列表的末尾，这种情况时间复杂度就是 O(1)。<br>因为如果在指定位置i插入删除时候会涉及到一个<strong>元素的移动</strong>（从插入位置开始的元素向后&#x2F;向前复制一份）这种情况时间复杂度就为 O(n-i)。所以我们插入的时候使用尾插，并且指定一个合适的初始容量可以极大提升性能，甚至超过LinkedList。  </p>
+<p>另外因为数组长度是固定的，arraylist有一个<strong>扩容机制</strong>，以无参数构造方法创建 <code>ArrayList</code> 时，实际上初始化赋值的是一个空数组。当真正对数组进行添加元素操作时，才真正分配容量。即向数组中添加第一个元素时，数组容量扩为 <strong>10</strong>。<strong>当超出长度时，他会新建一个数组（根据扩容因子），然后将老数组的数据拷贝到新的数组。</strong></p>
+<p><strong>内存占用：</strong> ArrayList底层是数组，内存连续，节省内存。</p>
+<h2 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h2><p><strong>底层数据结构：</strong> 底部基于双向链表实现，内部使用Node节点来存储元素，不是连续的。</p>
+<p><strong>插入删除</strong>：所以适合元素头尾部的插入删除，因为链表有很多节点，节点有指针可以指向下一个节点，只需要改变指针的指向就可以实现插入和删除 <strong>近似 O(1)，</strong> 但是也不适合指定位置i的插入删除，因为要先移动到指定位置再插入。时间复杂度近似为<code>o(n)。</code><br><strong>查找：</strong> 不适合元素的查询，需要逐一的遍历来找到目标元素，时间复杂度O(n)。</p>
+<p><strong>内存占用：</strong>LinkedList是双向链表，需要存储数据和<strong>两个指针</strong>，更占用内存。</p>
+<h2 id="Vector"><a href="#Vector" class="headerlink" title="Vector "></a>Vector </h2><p><code>Vector</code> 是 <code>List</code> 的古老实现类，底层使用 <code>Object[ ]</code>存储，线程安全的。</p>
+<h2 id="ArrayList-和-Array（数组）的区别"><a href="#ArrayList-和-Array（数组）的区别" class="headerlink" title="ArrayList 和 Array（数组）的区别"></a>ArrayList 和 Array（数组）的区别</h2><ul>
+<li><code>ArrayList</code>会根据实际存储的元素动态地扩容或缩容，而 <code>Array</code> 被创建之后就不能改变它的长度了，容量是固定的</li>
+<li><code>ArrayList</code> 允许你使用泛型来确保类型安全，<code>Array</code> 则不可以。</li>
+<li><code>ArrayList</code> 中只能存储对象。对于基本类型数据，需要使用其对应的包装类（如 Integer、Double 等）。<code>Array</code> 可以直接存储基本类型数据，也可以存储对象。</li>
+<li><code>ArrayList</code> 支持插入、删除、遍历等常见操作，并且提供了丰富的 API 操作方法，比如 <code>add()</code>、<code>remove()</code>等。<code>Array</code> 只是一个固定长度的数组，只能按照下标访问其中的元素，不具备动态添加、删除元素的能力。</li>
+<li><code>ArrayList</code>创建时不需要指定大小，而<code>Array</code>创建时必须指定大小</li>
+</ul>
+<h1 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h1><ul>
+<li>红黑树是一种<strong>自平衡的二叉搜索树</strong>，具有以下特征<ol>
+<li>每个节点要么是黑色，要么是红色</li>
+<li>根节点是黑色的</li>
+<li>所有叶子结点都是黑色的空节点(NIL节点)</li>
+<li>如果一个节点是红色的，则它的啷个子节点都是黑色</li>
+<li>任意节点到其每个叶子结点的所有路径都包含相同数目的黑色节点</li>
+</ol>
+</li>
+<li>这些特征保证了红黑树在插入和删除节点时能够保持平衡，从而保证了其查找、插入、删除操作的时间复杂度都是O(log n)级别的。</li>
+</ul>
+<h1 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h1><p><strong>底层实现：</strong><br>jdk1.8之前：<strong>数组+单向链表</strong>实现。</p>
+<p>若遇到哈希冲突，就判断该元素与要存入的元素的  key 是否相同，如果<strong>相同的话，直接覆盖</strong>，不相同就通过<strong>拉链法</strong>解决冲突。即数组中每一格就是一个链表，将冲突的值直接加到链表中即可。</p>
+<p>jdk1.8之后：<strong>当链表长度大于8且只有数组长度超过64</strong>，链表会转变为红黑树，元素以内部类Node节点存在。否则，就是只是执行 <code>resize()</code> 方法对数组扩容。</p>
+<p><img src="https://img-blog.csdnimg.cn/d7df8f480bff435089dc7c9c5da203ab.png" alt="Description"></p>
+<p><strong>put方法：</strong></p>
+<p>1.当table数组为null或者长度为0时进行resize扩容初始化数组<br>2.计算key的hash值，找到对应的数组下标，如果没有产生hash冲突，就直接插入元素存入数组<br>3.如果产生hash冲突有元素，就要和插入的key先进行比较，key相同就直接覆盖取代该元素，如果不同，则判断是否是红黑树节点，如果是，就放入树中，如果为链表节点，就遍历链表插入尾部。<br>当链表长度大于8，并且数组长度大于等于64则将链表转变为红黑树，否则就只是执行数组扩容，当长度低于6则将红黑树转回链表。<br>4.如果key为null，就存在数组下标为0的位置。<code>HashMap</code> 可以存储 null 的 key 和 value，但 null 作为键只能有一个，null 作为值可以有多个<br>5.并且其数组也是和Arraylist一样有数组扩容机制</p>
+<p><strong>get方法：</strong></p>
+<p>获取时，直接找到hash值对应的下标，在进一步判断key是否相同，从而找到对应值。</p>
+<h2 id="扩容机制"><a href="#扩容机制" class="headerlink" title="扩容机制"></a><strong>扩容机制</strong></h2><p>在添加元素或初始化的时候需要调用resize方法进行扩容，第一次添加数据初始化数组长度为16，以后每次每次扩容都是达到了扩容阈值（数组长度*0.75）每次扩容的时候，都是扩容之前容量的2倍；扩容之后，会新创建一个数组，需要把老数组中的数据挪动到新的数组中没有hash冲突的节点，则直接使用e.hash &amp; (newCap - 1)计算新数组的索引位置如果是红黑树，走红黑树的添加如果是链表，则需要遍历链表，可能需要拆分链表，判断(e.hash &amp;oldCap)是否为0，该元素的位置要么停留在原始位置，要么移动到原始位置+增加的数组大小这个位置上</p>
+<h2 id="加载因子为什么是0-75不是1"><a href="#加载因子为什么是0-75不是1" class="headerlink" title="加载因子为什么是0.75不是1"></a>加载因子为什么是0.75不是1</h2><p>加载因子是<strong>控制数组存放数据的疏密程度</strong>，加载因子越接近1，数组存放的就越密，也就是会让链表长度增加，加载因子越接近0，数组存放数据也就越稀疏，hash冲突次数也就越少<br>加载因子<strong>太大，查询效率较低</strong>（因为hash冲突概率大，链表长度大，要一个个遍历）<br>加载因子<strong>太小，数组的空间利用率太低</strong>，存放的数据很分散<br>所以官方给出了空间和时间上的比较好的平衡点，也就是0.75</p>
+<h2 id="HashMap如何避免内存泄露问题"><a href="#HashMap如何避免内存泄露问题" class="headerlink" title="HashMap如何避免内存泄露问题"></a>HashMap如何避免内存泄露问题</h2><p>自定义对象为key的时候，一定要重写equals和hashcode保证对象key不重复创建。</p>
+<h2 id="HashMap-和-Hashtable-的区别"><a href="#HashMap-和-Hashtable-的区别" class="headerlink" title="HashMap 和 Hashtable 的区别"></a>HashMap 和 Hashtable 的区别</h2><ul>
+<li><strong>线程是否安全：</strong> <code>HashMap</code> 是非线程安全的，<code>Hashtable</code> 是线程安全的,因为 <code>Hashtable</code> 内部的方法基本都经过<code>synchronized</code> 修饰。（如果你要保证线程安全的话就使用 <code>ConcurrentHashMap</code> 吧！）；</li>
+<li><strong>效率：</strong> 因为线程安全的问题，<code>HashMap</code> 要比 <code>Hashtable</code> 效率高一点。另外，<code>Hashtable</code> 基本被淘汰，不要在代码中使用它；</li>
+<li><strong>对 Null key 和 Null value 的支持：</strong> HashMap允许key和value为null，而HashTable不允许；</li>
+<li><strong>数据结构：</strong> Hashtable还是数组+链表。</li>
+</ul>
+<h2 id="HashMap-和-HashSet-区别"><a href="#HashMap-和-HashSet-区别" class="headerlink" title="HashMap 和 HashSet 区别"></a>HashMap 和 HashSet 区别</h2><p><strong><code>HashSet</code> 底层就是基于 <code>HashMap</code> 实现</strong></p>
+<table>
+<thead>
+<tr>
+<th><code>HashMap</code></th>
+<th><code>HashSet</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>实现了 <code>Map</code> 接口</td>
+<td>实现 <code>Set</code> 接口</td>
+</tr>
+<tr>
+<td>存储键值对</td>
+<td>仅存储对象</td>
+</tr>
+<tr>
+<td>调用 <code>put()</code>向 map 中添加元素</td>
+<td>调用 <code>add()</code>方法向 <code>Set</code> 中添加元素</td>
+</tr>
+</tbody></table>
+<h1 id="Java常见的集合类"><a href="#Java常见的集合类" class="headerlink" title="Java常见的集合类"></a>Java常见的集合类</h1><p>第一个是Collection属于单列集合，第二个是Map属于双列集合</p>
+<p>在Collection中有三个子接口List、Set和Queue。在我们平常开发的过程中用的比较多像list接口中的实现类ArrarList和LinkedList。在Set接口中有实现类HashSet和TreeSet。</p>
+<p>在map接口中有很多的实现类，平时比较常见的是HashMap、TreeMap，还有一个线程安全的map:ConcurrentHashMap。</p>
+<h1 id="Collection与Collections的区别"><a href="#Collection与Collections的区别" class="headerlink" title="Collection与Collections的区别"></a>Collection与Collections的区别</h1><p><code>Collection是java集合类中</code>接口，用于表示一组对象的集合。它提供了一些通用的操作，如添加、删除、遍历等。</p>
+<p>Collections是Java中的一个工具类，它包含了一组静态方法，用于操作各种集合类型。它提供了一些常用的算法和工具方法，如排序、查找、复制等。Collections类中的方法通常是针对Collection类型的实例进行操作的。</p>
+<p><strong>它们是两个独立的概念。</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://handsomeh666.github.io/">HZH</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://handsomeh666.github.io/2023/04/13/hello-world/">https://handsomeh666.github.io/2023/04/13/hello-world/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明来自本博客</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/java%E5%9F%BA%E7%A1%80/">java基础</a></div><div class="post_share"><div class="social-share" data-image="https://tupian.qqw21.com/article/UploadPic/2022-5/202251313202922535.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/post/50a2b841.html" title="java序列化"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-04-13</div><div class="title">java序列化</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://tupian.qqw21.com/article/UploadPic/2022-5/202251313202922535.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">HZH</div><div class="author-info__description">小白必看</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:996112240@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.</span> <span class="toc-text">面向过程和面向对象的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A4%A7%E5%B0%8F%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%BB%96%E4%BB%AC%E7%9A%84%E5%B0%81%E8%A3%85%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">八种基本数据类型的大小，以及他们的封装类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">3.</span> <span class="toc-text">基本类型和包装类型的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#equals%E5%92%8C-x3D-x3D-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">4.</span> <span class="toc-text">equals和&#x3D;&#x3D;的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#String%E7%B1%BB%E7%9A%84equals%E6%96%B9%E6%B3%95"><span class="toc-number">4.1.</span> <span class="toc-text">String类的equals方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%87%8D%E5%86%99equals%E5%BF%85%E9%A1%BB%E9%87%8D%E5%86%99hashcode"><span class="toc-number">5.</span> <span class="toc-text">为什么重写equals必须重写hashcode</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hashcode%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">5.1.</span> <span class="toc-text">hashcode的作用：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%B8%80%E8%B5%B7%E9%87%8D%E5%86%99"><span class="toc-number">5.2.</span> <span class="toc-text">为什么要一起重写</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%85%B1%E5%90%8C%E7%82%B9%E5%92%8C%E5%8C%BA%E5%88%AB"><span class="toc-number">6.</span> <span class="toc-text">接口和抽象类共同点和区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">7.</span> <span class="toc-text">深拷贝和浅拷贝的区别是什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#String%E3%80%81StringBuffer%E3%80%81StringBuilder"><span class="toc-number">8.</span> <span class="toc-text">String、StringBuffer、StringBuilder</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">9.</span> <span class="toc-text">反射的理解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Object%E7%B1%BB%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">10.</span> <span class="toc-text">Object类中的常用方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IO%E6%B5%81"><span class="toc-number">11.</span> <span class="toc-text">IO流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E4%B8%BA%E5%93%AA%E5%87%A0%E7%A7%8D"><span class="toc-number">11.1.</span> <span class="toc-text">分为哪几种</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E8%8A%82-x2F-%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">11.2.</span> <span class="toc-text">字节&#x2F;字符缓冲流的作用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ArrayList%E5%92%8CLinkedList%E5%8C%BA%E5%88%AB"><span class="toc-number">12.</span> <span class="toc-text">ArrayList和LinkedList区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayList"><span class="toc-number">12.1.</span> <span class="toc-text">ArrayList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedList"><span class="toc-number">12.2.</span> <span class="toc-text">LinkedList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vector"><span class="toc-number">12.3.</span> <span class="toc-text">Vector </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayList-%E5%92%8C-Array%EF%BC%88%E6%95%B0%E7%BB%84%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">12.4.</span> <span class="toc-text">ArrayList 和 Array（数组）的区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91"><span class="toc-number">13.</span> <span class="toc-text">红黑树</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HashMap"><span class="toc-number">14.</span> <span class="toc-text">HashMap</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%AE%B9%E6%9C%BA%E5%88%B6"><span class="toc-number">14.1.</span> <span class="toc-text">扩容机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD%E5%9B%A0%E5%AD%90%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF0-75%E4%B8%8D%E6%98%AF1"><span class="toc-number">14.2.</span> <span class="toc-text">加载因子为什么是0.75不是1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashMap%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E9%97%AE%E9%A2%98"><span class="toc-number">14.3.</span> <span class="toc-text">HashMap如何避免内存泄露问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashMap-%E5%92%8C-Hashtable-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">14.4.</span> <span class="toc-text">HashMap 和 Hashtable 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashMap-%E5%92%8C-HashSet-%E5%8C%BA%E5%88%AB"><span class="toc-number">14.5.</span> <span class="toc-text">HashMap 和 HashSet 区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%B8%B8%E8%A7%81%E7%9A%84%E9%9B%86%E5%90%88%E7%B1%BB"><span class="toc-number">15.</span> <span class="toc-text">Java常见的集合类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Collection%E4%B8%8ECollections%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">16.</span> <span class="toc-text">Collection与Collections的区别</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/b8b0eacd.html" title="java基础">java基础</a><time datetime="2023-05-26T10:35:33.000Z" title="Created 2023-05-26 18:35:33">2023-05-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/78bb5290.html" title="详解设计模式">详解设计模式</a><time datetime="2023-05-26T10:17:39.000Z" title="Created 2023-05-26 18:17:39">2023-05-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/9982416a.html" title="MySQL高级">MySQL高级</a><time datetime="2023-05-23T09:47:49.000Z" title="Created 2023-05-23 17:47:49">2023-05-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/da3e1361.html" title="Mybatis">Mybatis</a><time datetime="2023-04-27T13:33:30.000Z" title="Created 2023-04-27 21:33:30">2023-04-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/50a2b841.html" title="java序列化">java序列化</a><time datetime="2023-04-13T13:21:18.611Z" title="Created 2023-04-13 21:21:18">2023-04-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By HZH</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
